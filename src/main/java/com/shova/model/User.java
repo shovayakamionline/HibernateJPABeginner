@@ -18,6 +18,9 @@ public class User {
     private double salary;
     private String city;
 
+    public User(){
+
+    }
     public User (String fullName, String email, String password, int age, double salary, String city) {
         this. fullName = fullName;
         this.email = email;
@@ -27,9 +30,6 @@ public class User {
         this.city = city;
     }
 
-    public User(){
-
-    }
     public Integer getId() {
         return id;
     }
@@ -79,4 +79,17 @@ public class User {
        public void setCity(String city) {
         this.city = city;
        }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", fullName='" + fullName + '\'' +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", age=" + age +
+                ", salary=" + salary +
+                ", city='" + city + '\'' +
+                '}';
+    }
 }
